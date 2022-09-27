@@ -34,22 +34,19 @@ function changeDirectionIfNecessary(ball, x, y) {
 
 // TODO: implement the create function
 function create(color, dx, dy) {
+  // TODO: Set newBall properties: dx, dy, width, height
+  // HINT: Set the newBall's height and width each to 40
   const newBall = {
     element: null,
     width: 40,
     height: 40,
-    x: dx,
-    y: dy,
-    dx: 0,
-    dy: 0
+    x: dx, //current position x
+    y: dy, //current position y
+    dx: 0, //next move dx
+    dy: 0 //next move dy
   }
   
-  //Object.create(this);
-
-  // TODO: Set newBall properties: dx, dy, width, height
-  // HINT: Set the newBall's height and width each to 40
   
-
   // TODO: set the newBall.element property and initialize it to a Html element "div"
   newBall.element = document.createElement("div");
 
@@ -73,8 +70,9 @@ function create(color, dx, dy) {
 
 // TODO: implement the update function
 function update(ball, x, y) {
-  ball.dx = x;
-  ball.dy = y;
+  //I assume x and y are maximum steps in x and y directions. Steps are random.
+  ball.dx = Math.round(Math.random()*x*2 - x);
+  ball.dy = Math.round(Math.random()*y*2 - y);
 
   changeDirectionIfNecessary( ball, ball.x + ball.dx, ball.y + ball.dy);
 
@@ -104,7 +102,7 @@ moveTo(ball3, 20, 20);
 
 update(ball1, 70, 0);
 update(ball2, 20, 200);
-update(ball3, 300, 330);
+update(ball3, 300, 330); //330 is risky, as area.height === 400, so for edge cases the ball will be out of the area
 
 // Do not change code past this point
 if (typeof module !== 'undefined') {

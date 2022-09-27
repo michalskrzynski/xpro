@@ -1,6 +1,7 @@
-# xpro
+<h1>My MIT xPro Modules Repo</h1>
 
-My first github repo.
-Hello Odin
+This is an aggregated github repo of all excercises related to my xPro course.
 
-what now?
+## Modules
+
+Each module folder holds some (not all) activities I solved.
