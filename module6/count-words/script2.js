@@ -11,21 +11,12 @@ function countWords() {
 
   // TODO: add code here to remove the periods and commas and transform all words to lowercase letters
   const words = text.toLowerCase().replace(',' , '').replace('.', '').split(" ");
-  
-  // below option I consider better
-  //const regex = /\w+/g;
-  //const words = [...text.matchAll(regex)]; 
 
   // wordCount is a map containing pair like: word => its occurences
   const wordCount = {};
 
   // This loop goes through the words and creates the key value pair objects under wordCount
-  words.forEach( (item) => {
-    if (wordCount[item] == null) wordCount[item] = 1;
-    else {
-      wordCount[item] += 1;
-    }
-  });
+  words.forEach( (item) => wordCount[item] == null ? wordCount[item] = 1 : wordCount[item] += 1 );
 
   const myArray = Object.entries(wordCount);
   myArray.sort( (a, b) => b[1] - a[1] ); // thats because under [1] index there # occurences
