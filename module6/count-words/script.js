@@ -11,15 +11,14 @@ function countWords() {
 
   // TODO: add code here to remove the periods and commas and transform all words to lowercase letters
   const regex = /\w+/g;
-  const words = [...text.matchAll(regex)];
+  const words = [...(text.toLowerCase()).matchAll(regex)];
 
 
   // The wordArray array will contains a key value pair for words and their occurences in the text
   //const wordArray = text.split(" ");
 
   const counters = words.reduce( (prev, curr) => {
-    let candidate = curr[0].toLowerCase();
-    candidate in prev ? prev[candidate]++ : prev[candidate] = 1;
+    curr in prev ? prev[curr]++ : prev[curr] = 1;
     return prev;
   }, {});
 

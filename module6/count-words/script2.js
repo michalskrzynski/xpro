@@ -11,6 +11,7 @@ function countWords() {
 
   // TODO: add code here to remove the periods and commas and transform all words to lowercase letters
   const words = text.toLowerCase().replace(',' , '').replace('.', '').split(" ");
+  //const words = [...(text.toLowerCase()).matchAll(/\w+/g)]; //better solution, matches words, no need to think about punctuation
 
   // wordCount is a map containing pair like: word => its occurences
   const wordCount = {};
