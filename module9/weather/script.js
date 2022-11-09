@@ -38,10 +38,10 @@ Instructions:
   };
 
   const urlArray = [
-    'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d8e32bf6819d8aab34b893d3a356c511',
-    'https://api.openweathermap.org/data/2.5/weather?q=Houston&APPID=d8e32bf6819d8aab34b893d3a356c511',
-    'https://api.openweathermap.org/data/2.5/weather?q=Lisbon&APPID=d8e32bf6819d8aab34b893d3a356c511',
-    'https://api.openweathermap.org/data/2.5/weather?q=Baltimore&APPID=d8e32bf6819d8aab34b893d3a356c511',
+    'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=',
+    'https://api.openweathermap.org/data/2.5/weather?q=Houston&APPID=',
+    'https://api.openweathermap.org/data/2.5/weather?q=Lisbon&APPID=',
+    'https://api.openweathermap.org/data/2.5/weather?q=Baltimore&APPID=',
   ];
 
   urlArray.forEach(async (url) => {
