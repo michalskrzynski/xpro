@@ -21,6 +21,7 @@ function countWords() {
 
   const myArray = Object.entries(wordCount);
   myArray.sort( (a, b) => b[1] - a[1] ); // thats because under [1] index there # occurences
+  //https://www.w3schools.com/jsref/jsref_sort.asp
 
   const bArray = myArray.splice(0, 3);
   return bArray;
