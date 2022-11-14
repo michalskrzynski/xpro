@@ -3,7 +3,7 @@ function one() {
     setTimeout( () => {
       console.log(1);
       resolve();
-    },1000);
+    },5000);
   });
 }
 
@@ -21,12 +21,38 @@ function three() {
     setTimeout( () => {
       console.log( 3 );
       resolve(); 
-    }, 1000);
+    }, 500);
   });
 }
 
 
-one()
-  .then(two)
-  .then(three)
-  .then( () => {console.log('all done');}); 
+//ex 1
+
+// one()
+//   .then(two)
+//   .then(three)
+//   .then( () => {console.log('all done');}); 
+
+// console.log('Yeah!');
+
+
+//ex 2
+
+// const withAwait = async () => {
+
+//   await one();
+//   await two();
+//   await three();
+
+// }
+
+// withAwait();
+
+
+const withAwaitAll = async () => {
+  Promise.all(
+  [ one(), two(), three() ]
+  )
+};
+
+withAwaitAll();
